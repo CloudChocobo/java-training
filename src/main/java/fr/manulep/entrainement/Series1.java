@@ -9,7 +9,12 @@ public class Series1 {
 
 	public static String helloWorld(String name) {
 		//1
-		return null;
+		
+		if ((name == null) || (name == "")) {
+			return "Hello World";
+			} else {
+			return "Hello " + name;
+				}
 	}
 	
 
