@@ -1,5 +1,7 @@
 package fr.manulep.entrainement;
 
+import java.util.ArrayList;
+
 public class Series1 {
 	
 	private Series1() {
@@ -19,9 +21,22 @@ public class Series1 {
 	
 
 	public static String[] removeNullElements(String[] array) {
-		//2
+	//2
+
+	/*ArrayList<String>wordNotNull = new ArrayList<>();
+	for (int i = 0; i < array.length; i++) {
+		if (array [i] != null) {
+			wordNotNull.add (array [i]);
+			}	
+		}
+
+		String [] result = new String[wordNotNull];
+		result = wordNotNull.toArray(result);
+		return result;*/
 		return null;
+
 	}
+	
 
 	public static int[] addElementToBeginning(int[] array, int element) {
 		//3
@@ -110,8 +125,16 @@ public class Series1 {
 
 	public static boolean isPeer(int number) {
 		//20
-		return false;
+		if (number % 2 == 0) {
+			return true;
+		} else {
+			return false;
+		}
 	}
+
+
+
+
 
 
 }
