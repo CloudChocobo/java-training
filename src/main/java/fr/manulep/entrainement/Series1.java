@@ -110,7 +110,12 @@ public class Series1 {
 
 	public static boolean checkIfStringStartsWithConsonant( String word ) {
 		//17
-		return false;
+	
+		if ((word.substring(0, 1).equalsIgnoreCase("a")) || (word.substring(0, 1).equalsIgnoreCase("e"))  || (word.substring(0, 1).equalsIgnoreCase("i"))  || (word.substring(0, 1).equalsIgnoreCase("o"))  || (word.substring(0, 1).equalsIgnoreCase("u"))  || (word.substring(0, 1).equalsIgnoreCase("y")) ){
+			return false;
+		} else {
+			return true;	
+		}
 	}
 
 	public static String getDomainName(String email) {
