@@ -155,6 +155,17 @@ class Series1Test
 		String text = "Hello Kitty";
 		assertEquals("ello itty", Series1.removeCapitals(text));
 	}
+
+	@Test
+	public void removeCapitals1() {
+		assertEquals("", Series1.removeCapitals(""));
+		assertEquals("r", Series1.removeCapitals("r"));
+		assertEquals("", Series1.removeCapitals("T"));
+		assertEquals("", Series1.removeCapitals("Z"));
+		assertEquals("ortue", Series1.removeCapitals("Tortue"));
+		assertEquals("torue", Series1.removeCapitals("torTue"));
+		assertEquals("hello itty", Series1.removeCapitals("hello Kitty"));
+	}
 	
 	@Test
 	public void addingTwoNumbers() {

@@ -1,5 +1,7 @@
 package fr.manulep.entrainement;
 
+import java.util.ArrayList;
+
 public class Series1 {
 	
 	private Series1() {
@@ -81,7 +83,19 @@ public class Series1 {
 
 	public static String removeCapitals(String text) {
 		//11
-		return null;
+		if (text.isEmpty()) {
+			return "";
+		}
+
+		String textWithoutCapitals = "";
+		for (int position = 0; position < text.length(); position++) {
+			char lettre = text.charAt(position);
+			if (!Character.isUpperCase(lettre)) {
+				textWithoutCapitals += lettre;
+			}
+		}
+
+		return textWithoutCapitals;
 	}
 	
 	public static long addingTwoNumbers(long number1, long number2) {
