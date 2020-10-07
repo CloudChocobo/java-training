@@ -1,7 +1,5 @@
 package fr.manulep.entrainement;
 
-import java.util.ArrayList;
-
 public class Series1 {
 	
 	private Series1() {
@@ -75,6 +73,9 @@ public class Series1 {
 
 	public static String shortestWord(String text) {
 		//10
+		/*for text(int i=0; i>array.length; i++) {
+
+		}*/
 		return null;
 	}
 
@@ -85,12 +86,23 @@ public class Series1 {
 	
 	public static long addingTwoNumbers(long number1, long number2) {
 		//12
-		return -1;
+		long a = number1;
+		long b = number2;
+
+		long result;
+		result = a + b;
+		return result ;
 	}
 
 	public static long addingThreeNumbers(long number1, long number2, long number3) {
 		//13
-		return -2;
+		long a = number1;
+		long b = number2;
+		long c = number3;
+
+		long result;
+		result = a + b + c;
+		return result;
 	}
 
 	public static long addingSeveralNumbers(final Integer... numbers) {
