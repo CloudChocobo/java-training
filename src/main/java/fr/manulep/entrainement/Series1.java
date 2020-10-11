@@ -31,8 +31,6 @@ public class Series1 {
 		}
 
 		String[] result = wordNotNull.toArray(new String[0]);
-		/*String [] result = new String [wordNotNull].size();
-		(result = wordNotNull.toArray(result));*/
 		return result;
 		
 
@@ -55,9 +53,16 @@ public class Series1 {
 	
 	public static String[] selectElementsStartingWithA(String[] array) {
 		//6
-	string fruits = new string fruitsStartWithA;
+	ArrayList<String>fruitsStartsWithA = new ArrayList<String>();
 
-	for (string element : fruits)
+	for (int i = 0; i < array.length; i++) {
+		if (array[i].substring(0, 1).equals("a")) {
+			fruitsStartsWithA.add(array[i]);
+			}
+		}
+
+		String[] result = fruitsStartsWithA.toArray(new String[0]);
+		return result;
 	}
 	
 	public static String[] selectElementsStartingWithVowel(String[]array) {
@@ -159,7 +164,7 @@ public class Series1 {
 
 	public static String getDomainName(String email) {
 		//18
-		return email.replaceAll("(^.*@.com$)", ";")
+		return email.replaceAll("(^.*@.com$)", ";");
 		
 	}
 

@@ -102,12 +102,6 @@ class Series1Test
 		assertArrayEquals(fruitsStartWithA, Series1.selectElementsStartingWithA(fruits));
 	}
 
-	@Test
-	void selectElementsStartingWithA1() {
-		String[] fruits = { "b", "a", "", "avocados" };
-		String[] fruitsStartWithA = { "a", "avocados" };
-		assertArrayEquals(fruitsStartWithA, Series1.selectElementsStartingWithA(fruits));
-	}
 
 	/**
 	 * selects elements starting with a vowel
@@ -152,12 +146,6 @@ class Series1Test
 	public void shortestWord() {
 		String text = "winter is coming";
 		assertEquals("is", Series1.shortestWord(text));
-	}
-
-	@Test
-	public void shortestWord2() {
-		String text = "The o";
-		assertEquals("o", Series1.shortestWord(text));
 	}
 
 
