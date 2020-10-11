@@ -149,7 +149,6 @@ class Series1Test
 	}
 
 
-
 	/**
 	 * removes capital letters from a string
 	 */
