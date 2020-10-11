@@ -23,16 +23,14 @@ public class Series1 {
 	public static String[] removeNullElements(String[] array) {
 	//2
 
-	ArrayList<String>wordNotNull = new ArrayList<String>();
+	ArrayList<String>wordNotNull = new ArrayList<>();
 	for (int i = 0; i < array.length; i++) {
-		if (array[i] != null) {
-			wordNotNull.add(array[i]);
+		if (array [i] != null) {
+			wordNotNull.add (array[i]);
 			}	
-		}
-
-		String[] result = wordNotNull.toArray(new String[0]);
-		/*String [] result = new String [wordNotNull].size();
-		(result = wordNotNull.toArray(result));*/
+		};
+		String [] result = new String[wordNot].size()]
+		result = wordNotNull.toArray(result);
 		return result;
 		
 
@@ -41,6 +39,7 @@ public class Series1 {
 	public static int[] addElementToBeginning(int[] array, int element) {
 		//3
 
+		return null;
 	}
 	
 	public static int[] allElementsExceptFirstThree(int[] array) {
@@ -55,9 +54,9 @@ public class Series1 {
 	
 	public static String[] selectElementsStartingWithA(String[] array) {
 		//6
-	string fruits = new string fruitsStartWithA;
 
-	for (string element : fruits)
+		return null;
+
 	}
 	
 	public static String[] selectElementsStartingWithVowel(String[]array) {
@@ -100,6 +99,7 @@ public class Series1 {
 				textWithoutCapitals += letter;
 			}
 		}
+
 		return textWithoutCapitals;
 	}
 	
@@ -126,19 +126,13 @@ public class Series1 {
 
 	public static long addingSeveralNumbers(final Integer... numbers) {
 		//14
-		long a = 0;
-		for (int i = 0; i < numbers.length ; i++) {
-		a += numbers [i];}
-		return a;
+		return -1;
 	}
 
 	public static float makeNegative(float number) {
 		//15
-		if (number < 0) {
-			return number;
-		} else {
-			return 0 - number;
-		}
+		
+		return 0;
 	}
 
 	public static boolean checkForSpecialCharacters(String string) {
@@ -159,8 +153,8 @@ public class Series1 {
 
 	public static String getDomainName(String email) {
 		//18
-		return email.replaceAll("(^.*@.com$)", ";")
-		
+
+		return null;
 	}
 
 	public static int[] letterPosition(String name) {

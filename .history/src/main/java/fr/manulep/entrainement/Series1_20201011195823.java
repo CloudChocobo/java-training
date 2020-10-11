@@ -30,7 +30,7 @@ public class Series1 {
 			}	
 		}
 
-		String[] result = wordNotNull.toArray(new String[0]);
+		String[] result = wordNotNull.toArray(new String[0);
 		/*String [] result = new String [wordNotNull].size();
 		(result = wordNotNull.toArray(result));*/
 		return result;

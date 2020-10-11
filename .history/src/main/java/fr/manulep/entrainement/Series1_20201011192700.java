@@ -23,16 +23,14 @@ public class Series1 {
 	public static String[] removeNullElements(String[] array) {
 	//2
 
-	ArrayList<String>wordNotNull = new ArrayList<String>();
+	ArrayList<String>wordNotNull = new ArrayList<>();
 	for (int i = 0; i < array.length; i++) {
-		if (array[i] != null) {
-			wordNotNull.add(array[i]);
+		if (array [i] != null) {
+			wordNotNull.add (array[i]);
 			}	
-		}
-
-		String[] result = wordNotNull.toArray(new String[0]);
-		/*String [] result = new String [wordNotNull].size();
-		(result = wordNotNull.toArray(result));*/
+		};
+		String [] result = new String [wordNotNull].length();
+		result = wordNotNull.toArray(result);
 		return result;
 		
 
@@ -100,6 +98,7 @@ public class Series1 {
 				textWithoutCapitals += letter;
 			}
 		}
+
 		return textWithoutCapitals;
 	}
 	
@@ -134,11 +133,8 @@ public class Series1 {
 
 	public static float makeNegative(float number) {
 		//15
-		if (number < 0) {
-			return number;
-		} else {
-			return 0 - number;
-		}
+		
+		return 0;
 	}
 
 	public static boolean checkForSpecialCharacters(String string) {
@@ -159,8 +155,9 @@ public class Series1 {
 
 	public static String getDomainName(String email) {
 		//18
-		return email.replaceAll("(^.*@.com$)", ";")
-		
+
+
+		return null;
 	}
 
 	public static int[] letterPosition(String name) {

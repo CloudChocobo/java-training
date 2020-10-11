@@ -23,16 +23,14 @@ public class Series1 {
 	public static String[] removeNullElements(String[] array) {
 	//2
 
-	ArrayList<String>wordNotNull = new ArrayList<String>();
+	ArrayList<String>wordNotNull = new ArrayList<>();
 	for (int i = 0; i < array.length; i++) {
-		if (array[i] != null) {
-			wordNotNull.add(array[i]);
+		if (array [i] != null) {
+			wordNotNull.add (array[i]);
 			}	
-		}
-
-		String[] result = wordNotNull.toArray(new String[0]);
-		/*String [] result = new String [wordNotNull].size();
-		(result = wordNotNull.toArray(result));*/
+		};
+		String [] result = new String [wordNotNull].length();
+		result = wordNotNull.toArray(result);
 		return result;
 		
 

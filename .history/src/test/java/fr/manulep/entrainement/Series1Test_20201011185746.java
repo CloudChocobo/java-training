@@ -104,8 +104,8 @@ class Series1Test
 
 	@Test
 	void selectElementsStartingWithA1() {
-		String[] fruits = { "b", "a", "", "avocados" };
-		String[] fruitsStartWithA = { "a", "avocados" };
+		String[] fruits = { "bananas", "apples", "pears", "avocados" };
+		String[] fruitsStartWithA = { "apples", "avocados" };
 		assertArrayEquals(fruitsStartWithA, Series1.selectElementsStartingWithA(fruits));
 	}
 
