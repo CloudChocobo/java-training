@@ -42,8 +42,7 @@ public class Series1 {
 
 	public static int[] allElementsExceptFirstThree(int[] array) {
 		// 4
-	
-	return null;
+		return null;
 	}
 
 	public static String getFirstHalf(String word) {
@@ -103,11 +102,7 @@ public class Series1 {
 
 	public static String shortestWord(String text) {
 		// 10
-	String Word = new String();
-
 	
-
-
 		
 		return text;
 	}

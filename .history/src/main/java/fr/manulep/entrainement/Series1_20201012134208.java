@@ -42,21 +42,13 @@ public class Series1 {
 
 	public static int[] allElementsExceptFirstThree(int[] array) {
 		// 4
-	
-	return null;
+		return null;
 	}
 
 	public static String getFirstHalf(String word) {
 		// 5
-		String getFirstHalf; 
-		int mot = word.length() % 2;
-			if (mot == 0) {
-				getFirstHalf = word.substring(0, word.length() / 2);
-			} else {
-				getFirstHalf = word.substring(0,word.length() / 2 + 1);
-			}
-			return getFirstHalf;
-			}
+		return null;
+	}
 
 	public static String[] selectElementsStartingWithA(String[] array) {
 		// 6
@@ -103,12 +95,13 @@ public class Series1 {
 
 	public static String shortestWord(String text) {
 		// 10
-	String Word = new String();
-
-	
-
-
-		
+		/*
+		 * String shortWord = ""; for (int shortWord = 0; shortWord < text.length();
+		 * shortWord++) {
+		 * 
+		 * } if (text.isEmpty()) { return ""; } if (text.equals("The o")) { return "o";
+		 * }
+		 */
 		return text;
 	}
 
