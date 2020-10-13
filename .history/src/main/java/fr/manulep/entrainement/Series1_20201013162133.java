@@ -98,17 +98,17 @@ public class Series1 {
 
 	public static String[] reverseOrderInArray(String[] array) {
 		// 8
-	/*	String order = new String[array.length];
+		String reverseOrder = new String[array.length];
 
 		//prendre le dernier mot de l' "array total-1"
-		int j = array.length - 1;
+		int inverse = array.length-1;
 
-		for ( int i = 0; < array.length; i++) {
-			order[i] = array [inverse];
+		for ( int i = 0; i < array.length; i++) {
+			reverseOrder[i] = array [inverse];
 			inverse--;
 			}
-		return 	*/
-		}
+		return 	
+
 
 	public static int[] insertElementInTheMiddleOfAnArray(int[] array, int element) {
 		// 9

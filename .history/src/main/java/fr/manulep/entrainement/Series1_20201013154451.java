@@ -98,17 +98,9 @@ public class Series1 {
 
 	public static String[] reverseOrderInArray(String[] array) {
 		// 8
-	/*	String order = new String[array.length];
 
-		//prendre le dernier mot de l' "array total-1"
-		int j = array.length - 1;
-
-		for ( int i = 0; < array.length; i++) {
-			order[i] = array [inverse];
-			inverse--;
-			}
-		return 	*/
-		}
+		return null;
+	}
 
 	public static int[] insertElementInTheMiddleOfAnArray(int[] array, int element) {
 		// 9
@@ -233,7 +225,7 @@ public class Series1 {
 
 	public static String getDomainName(String email) {
 		// 18 
-		//.*@ --> avant le @ inclus (si après : @.*)
+		//regex ^$ début-fin, .*@ --> avant le @ inclus (si après : @.*)
 		String getDomainName = email.replaceAll("(.*@|.com)", "");
 		return getDomainName;
 	}

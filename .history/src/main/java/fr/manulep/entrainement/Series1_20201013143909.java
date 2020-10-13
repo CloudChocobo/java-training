@@ -98,17 +98,9 @@ public class Series1 {
 
 	public static String[] reverseOrderInArray(String[] array) {
 		// 8
-	/*	String order = new String[array.length];
 
-		//prendre le dernier mot de l' "array total-1"
-		int j = array.length - 1;
-
-		for ( int i = 0; < array.length; i++) {
-			order[i] = array [inverse];
-			inverse--;
-			}
-		return 	*/
-		}
+		return null;
+	}
 
 	public static int[] insertElementInTheMiddleOfAnArray(int[] array, int element) {
 		// 9
@@ -210,9 +202,8 @@ public class Series1 {
 
 	public static boolean checkForSpecialCharacters(String string) {
 		// 16
-		//pattern peut compiler lettre/ nombre ou carac speciaux - puis matcher - faire attention !, à la fois dans true et false
-		 
-		Pattern special = Pattern.compile("[@#$%&*()_+=|<>?{}\\[\\]~-]");
+		//pattern peut compiler lettre/ nombre ou carac speciaux - puis matcher 
+		Pattern special = Pattern.compile ("@!#%");
 		Matcher hasSpecial = special.matcher(string);
 
 		return hasSpecial.find();
@@ -232,9 +223,9 @@ public class Series1 {
 	}
 
 	public static String getDomainName(String email) {
-		// 18 
-		//.*@ --> avant le @ inclus (si après : @.*)
-		String getDomainName = email.replaceAll("(.*@|.com)", "");
+		// 18
+		
+		String getDomainName = email.replaceAll("(^.*@|.com$)", "");
 		return getDomainName;
 	}
 

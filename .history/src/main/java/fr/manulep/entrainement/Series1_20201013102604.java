@@ -2,9 +2,7 @@ package fr.manulep.entrainement;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.regex.Pattern;
-import java.util.regex.Matcher;
-
+import java.util.Scanner;
 
 public class Series1 {
 
@@ -53,8 +51,6 @@ public class Series1 {
 		// 5
 		String getFirstHalf;
 		int mot = word.length() % 2;
-
-		// vérifier si pair ou impair
 		if (mot == 0) {
 			getFirstHalf = word.substring(0, word.length() / 2);
 		} else {
@@ -68,7 +64,6 @@ public class Series1 {
 
 		ArrayList<String> fruitsStartsWithA = new ArrayList<String>();
 
-		//element parcourt le tableau
 		for (String fruit : array)
 			if (fruit.substring(0, 1).equals("a")) {
 				fruitsStartsWithA.add(fruit);
@@ -84,7 +79,6 @@ public class Series1 {
 
 		for (int i = 0; i < array.length; i++) {
 
-			//déclarer le cas null
 			if (array[i] != null && (array[i].substring(0, 1).equals("a") || array[i].substring(0, 1).equals("e")
 					|| array[i].substring(0, 1).equals("i") || array[i].substring(0, 1).equals("o")
 					|| array[i].substring(0, 1).equals("u") || array[i].substring(0, 1).equals("y"))) {
@@ -98,72 +92,38 @@ public class Series1 {
 
 	public static String[] reverseOrderInArray(String[] array) {
 		// 8
-	/*	String order = new String[array.length];
 
-		//prendre le dernier mot de l' "array total-1"
-		int j = array.length - 1;
-
-		for ( int i = 0; < array.length; i++) {
-			order[i] = array [inverse];
-			inverse--;
-			}
-		return 	*/
-		}
+		return null;
+	}
 
 	public static int[] insertElementInTheMiddleOfAnArray(int[] array, int element) {
 		// 9
-
-		//faire d'un Array, un ArrayList
-		ArrayList<Integer> listClone = new ArrayList<>();
-		for (int num : array) {
-			listClone.add(num);
-		}
-
-		//Ajouter element au milieu de l'array - Math.round arrondi à l'entier le plus proche le plus petit (entier le + proche au dessus =.ceil)
-		int middleEarth = Math.round(array.length / 2);
-				listClone.add(middleEarth, element);
-
-		//retourner du ArrayList vers un array
-		int [] newArray = new int[listClone.size()];
-		for (int i = 0 ; i < newArray.length; i++){
-			newArray[i] = listClone.get(i);
-		}
-
-		return newArray;
-	
+		return null;
 	}
 
 	public static String shortestWord(String text) {
 		// 10
-
-		//faire un "filet" d'une grande valeur qui sera la longueur de référence initiale
 		int length = 100;
-		 String[] mots = text.split(" ");
-		 // "" valeur minimum
+ 		String[] mots = text.split(" ");
 		String shortestWord = "";
-		
 
-		//boucle doit garder ou rejeter le nouveau mot étudié en fonctionde la longueur initiale ou mot précédement étudié qui devient longueur de ref
-		for (String word : mots ) {
-			if ( word.length() < length ) {
-				length = word.length();
-				shortestWord = word; 
+
+		for (int i = 0; i < mots.length ; i++) {
+			if (mots[i].length() < shortestWord.length()) {
+				shortestWord = mots[i];
 				}
 			}
+			System.out.println(shortestWord);
 	return shortestWord;
 	}
 
 	public static String removeCapitals(String text) {
 		// 11
-
-		//
 		String textWithoutCapitals = "";
-		
 		for (int i = 0; i < text.length(); i++) {
 			char letter = text.charAt(i);
-			//si letter n'est pas une majuscule, alors tWC = tWC + l
 			if (!Character.isUpperCase(letter)) {
-				textWithoutCapitals += letter; //rappel : +=	addition deux valeurs et stocke le résultat dans la variable (à gauche)
+				textWithoutCapitals += letter;
 			}
 		}
 		return textWithoutCapitals;
@@ -194,7 +154,7 @@ public class Series1 {
 		// 14
 		long a = 0;
 		for (int i = 0; i < numbers.length; i++) {
-			a += numbers[i]; //rappel : +=	addition deux valeurs et stocke le résultat dans la variable (à gauche)
+			a += numbers[i];
 		}
 		return a;
 	}
@@ -210,18 +170,13 @@ public class Series1 {
 
 	public static boolean checkForSpecialCharacters(String string) {
 		// 16
-		//pattern peut compiler lettre/ nombre ou carac speciaux - puis matcher - faire attention !, à la fois dans true et false
-		 
-		Pattern special = Pattern.compile("[@#$%&*()_+=|<>?{}\\[\\]~-]");
-		Matcher hasSpecial = special.matcher(string);
 
-		return hasSpecial.find();
+		return false;
 	}
 
 	public static boolean checkIfStringStartsWithConsonant(String word) {
 		// 17
 
-		// string pas de == donc .equals et ignorecase pour la maj
 		if ((word.substring(0, 1).equalsIgnoreCase("a")) || (word.substring(0, 1).equalsIgnoreCase("e"))
 				|| (word.substring(0, 1).equalsIgnoreCase("i")) || (word.substring(0, 1).equalsIgnoreCase("o"))
 				|| (word.substring(0, 1).equalsIgnoreCase("u")) || (word.substring(0, 1).equalsIgnoreCase("y"))) {
@@ -232,10 +187,9 @@ public class Series1 {
 	}
 
 	public static String getDomainName(String email) {
-		// 18 
-		//.*@ --> avant le @ inclus (si après : @.*)
-		String getDomainName = email.replaceAll("(.*@|.com)", "");
-		return getDomainName;
+		// 18
+		return email.replaceAll("(^.*@.com$)", ";");
+
 	}
 
 	public static int[] letterPosition(String name) {
@@ -245,7 +199,6 @@ public class Series1 {
 
 	public static boolean isPeer(int number) {
 		// 20
-		//si le modulo est égal à 0, alors pair, sinon impair
 		if (number % 2 == 0) {
 			return true;
 		} else {

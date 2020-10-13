@@ -234,7 +234,7 @@ public class Series1 {
 	public static String getDomainName(String email) {
 		// 18 
 		//.*@ --> avant le @ inclus (si après : @.*)
-		String getDomainName = email.replaceAll("(.*@|.com)", "");
+		String getDomainName = email.replaceAll("(^.*@|.com$)", "");
 		return getDomainName;
 	}
 

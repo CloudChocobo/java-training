@@ -2,8 +2,6 @@ package fr.manulep.entrainement;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.regex.Pattern;
-import java.util.regex.Matcher;
 
 
 public class Series1 {
@@ -98,19 +96,11 @@ public class Series1 {
 
 	public static String[] reverseOrderInArray(String[] array) {
 		// 8
-	/*	String order = new String[array.length];
 
-		//prendre le dernier mot de l' "array total-1"
-		int j = array.length - 1;
+		return null;
+	}
 
-		for ( int i = 0; < array.length; i++) {
-			order[i] = array [inverse];
-			inverse--;
-			}
-		return 	*/
-		}
-
-	public static int[] insertElementInTheMiddleOfAnArray(int[] array, int element) {
+	/*public static int[] insertElementInTheMiddleOfAnArray(int[] array, int element) {
 		// 9
 
 		//faire d'un Array, un ArrayList
@@ -119,19 +109,9 @@ public class Series1 {
 			listClone.add(num);
 		}
 
-		//Ajouter element au milieu de l'array - Math.round arrondi à l'entier le plus proche le plus petit (entier le + proche au dessus =.ceil)
-		int middleEarth = Math.round(array.length / 2);
-				listClone.add(middleEarth, element);
-
-		//retourner du ArrayList vers un array
-		int [] newArray = new int[listClone.size()];
-		for (int i = 0 ; i < newArray.length; i++){
-			newArray[i] = listClone.get(i);
-		}
-
-		return newArray;
-	
-	}
+		//Ajouter element au milieu de l'array
+		int middleArray = Math.round(array.length / 2);
+	}*/
 
 	public static String shortestWord(String text) {
 		// 10
@@ -160,10 +140,10 @@ public class Series1 {
 		String textWithoutCapitals = "";
 		
 		for (int i = 0; i < text.length(); i++) {
-			char letter = text.charAt(i);
-			//si letter n'est pas une majuscule, alors tWC = tWC + l
-			if (!Character.isUpperCase(letter)) {
-				textWithoutCapitals += letter; //rappel : +=	addition deux valeurs et stocke le résultat dans la variable (à gauche)
+			char lettreEnCours = text.charAt(i);
+			//si lettreEnCours n'est pas une majuscule, alors tWC = tWC + lEC
+			if (!Character.isUpperCase(lettreEnCours)) {
+				textWithoutCapitals += lettreEnCours; //rappel : +=	addition deux valeurs et stocke le résultat dans la variable (à gauche)
 			}
 		}
 		return textWithoutCapitals;
@@ -210,12 +190,8 @@ public class Series1 {
 
 	public static boolean checkForSpecialCharacters(String string) {
 		// 16
-		//pattern peut compiler lettre/ nombre ou carac speciaux - puis matcher - faire attention !, à la fois dans true et false
-		 
-		Pattern special = Pattern.compile("[@#$%&*()_+=|<>?{}\\[\\]~-]");
-		Matcher hasSpecial = special.matcher(string);
 
-		return hasSpecial.find();
+		return false;
 	}
 
 	public static boolean checkIfStringStartsWithConsonant(String word) {
@@ -232,10 +208,9 @@ public class Series1 {
 	}
 
 	public static String getDomainName(String email) {
-		// 18 
-		//.*@ --> avant le @ inclus (si après : @.*)
-		String getDomainName = email.replaceAll("(.*@|.com)", "");
-		return getDomainName;
+		// 18
+		return email.replaceAll("(^.*@.com$)", ";");
+
 	}
 
 	public static int[] letterPosition(String name) {
@@ -245,7 +220,6 @@ public class Series1 {
 
 	public static boolean isPeer(int number) {
 		// 20
-		//si le modulo est égal à 0, alors pair, sinon impair
 		if (number % 2 == 0) {
 			return true;
 		} else {
