@@ -39,22 +39,16 @@ public class Series1 {
 
 	public static int[] addElementToBeginning(int[] array, int element) {
 		// 3
-		// agrandir l'array longueur +1
-		int[]add = new int[(array.length+1)];
-		add[0] = element;
+		return null;
 
-		//add placé à l'avant de l'array
-		for (int i = 0; i< array.length; i++) {
-			add[i+1] = array [i];
-		} 
-		return add;
 	}
 
 	public static int[] allElementsExceptFirstThree(int[] array) {
 		// 4
 
+		return null;
 	}
-	
+
 	public static String getFirstHalf(String word) {
 		// 5
 		String getFirstHalf;
@@ -108,8 +102,7 @@ public class Series1 {
 
 		//prendre le dernier mot de l' "array total-1"
 		int r = array.length - 1;
-			
-		// faire croiser r et i dans les tableaux
+
 		for ( int i = 0; i < array.length; i++) {
 			order[i] = array [r];
 			r--;
@@ -247,7 +240,6 @@ public class Series1 {
 
 	public static int[] letterPosition(String name) {
 		// 19
-		
 		return null;
 	}
 

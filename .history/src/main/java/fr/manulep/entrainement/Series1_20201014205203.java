@@ -43,7 +43,6 @@ public class Series1 {
 		int[]add = new int[(array.length+1)];
 		add[0] = element;
 
-		//add placé à l'avant de l'array
 		for (int i = 0; i< array.length; i++) {
 			add[i+1] = array [i];
 		} 
@@ -53,8 +52,9 @@ public class Series1 {
 	public static int[] allElementsExceptFirstThree(int[] array) {
 		// 4
 
+		return null;
 	}
-	
+
 	public static String getFirstHalf(String word) {
 		// 5
 		String getFirstHalf;
