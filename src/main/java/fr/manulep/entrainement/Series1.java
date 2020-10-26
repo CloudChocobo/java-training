@@ -42,6 +42,7 @@ public class Series1 {
 	public static int[] addElementToBeginning(int[] array, int element) {
 		// 3
 		// agrandir l'array longueur +1
+<<<<<<< HEAD
 		int[] add = new int[(array.length + 1)];
 		add[0] = element;
 
@@ -49,14 +50,27 @@ public class Series1 {
 		for (int i = 0; i < array.length; i++) {
 			add[i + 1] = array[i];
 		}
+=======
+		int[]add = new int[(array.length+1)];
+		add[0] = element;
+
+		//add placé à l'avant de l'array
+		for (int i = 0; i< array.length; i++) {
+			add[i+1] = array [i];
+		} 
+>>>>>>> 1ed6a551468bb23daa01777919af9146b16ceaa9
 		return add;
 	}
 
 	public static int[] allElementsExceptFirstThree(int[] array) {
 		// 4
+<<<<<<< HEAD
 		return null;
-	}
+=======
 
+>>>>>>> 1ed6a551468bb23daa01777919af9146b16ceaa9
+	}
+	
 	public static String getFirstHalf(String word) {
 		// 5
 		String getFirstHalf;
@@ -108,6 +122,7 @@ public class Series1 {
 		// 8
 		String[] order = new String[array.length];
 
+<<<<<<< HEAD
 		// prendre le dernier mot de l' "array total-1"
 		int r = array.length - 1;
 
@@ -115,6 +130,17 @@ public class Series1 {
 		for (int i = 0; i < array.length; i++) {
 			order[i] = array[r];
 			r--;
+=======
+		//prendre le dernier mot de l' "array total-1"
+		int r = array.length - 1;
+			
+		// faire croiser r et i dans les tableaux
+		for ( int i = 0; i < array.length; i++) {
+			order[i] = array [r];
+			r--;
+			}
+		return order;
+>>>>>>> 1ed6a551468bb23daa01777919af9146b16ceaa9
 		}
 		return order;
 	}
@@ -254,6 +280,7 @@ public class Series1 {
 
 	public static int[] letterPosition(String name) {
 		// 19
+
 		String lowerCase = name.toLowerCase(); // transformer Majuscule en minuscule
 		
 		char[] alphabet = { ' ', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q',
@@ -266,6 +293,8 @@ public class Series1 {
 			letterPosition[i] = index; // tableau rempli avec les lettres/position
 		}
 		return letterPosition;
+
+
 	}
 
 	public static boolean isPeer(int number) {
