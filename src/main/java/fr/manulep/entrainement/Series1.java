@@ -24,6 +24,8 @@ public class Series1 {
 		}
 	}
 
+
+
 	public static String[] removeNullElements(String[] array) {
 		// 2
 
@@ -38,6 +40,8 @@ public class Series1 {
 		return result;
 
 	}
+
+
 
 	public static int[] addElementToBeginning(int[] array, int element) {
 		// 3
@@ -54,12 +58,26 @@ public class Series1 {
 		return add;
 	}
 
+
+
 	public static int[] allElementsExceptFirstThree(int[] array) {
 		// 4
-		return null;
+	//cf exo 9 array --> arrayList --> array
+		ArrayList<Integer>newArray = new ArrayList<>();
+		
+		for (int i=3; i<array.length; i++ ) { // démarrer à i=3 le nouveau tableau
+			newArray.add(array[i]);
+		}
 
+		int[]exceptThree = new int[newArray.size()]; // repasser de ArrayList en Array
+		for (int i=0; i<exceptThree.length; i++) {
+			exceptThree[i] = newArray.get(i);
+		}
+		return exceptThree;
 	}
 	
+
+
 	public static String getFirstHalf(String word) {
 		// 5
 		String getFirstHalf;
@@ -73,6 +91,8 @@ public class Series1 {
 		}
 		return getFirstHalf;
 	}
+
+
 
 	public static String[] selectElementsStartingWithA(String[] array) {
 		// 6
@@ -88,6 +108,8 @@ public class Series1 {
 		String[] result = fruitsStartsWithA.toArray(new String[0]);
 		return result;
 	}
+
+
 
 	public static String[] selectElementsStartingWithVowel(String[] array) {
 		// 7
@@ -107,6 +129,8 @@ public class Series1 {
 		return result;
 	}
 
+
+
 	public static String[] reverseOrderInArray(String[] array) {
 		// 8
 		String[] order = new String[array.length];
@@ -124,10 +148,12 @@ public class Series1 {
 		return order;
 	}
 
+
+
 	public static int[] insertElementInTheMiddleOfAnArray(int[] array, int element) {
 		// 9
 
-		// faire d'un Array, un ArrayList
+		// faire d'un Array, un ArrayList : arrayList<Integer> x =  new ArrayList<Integer>();
 		ArrayList<Integer> listClone = new ArrayList<>();
 		for (int num : array) {
 			listClone.add(num);
@@ -138,7 +164,7 @@ public class Series1 {
 		int middleEarth = Math.round(array.length / 2);
 		listClone.add(middleEarth, element);
 
-		// retourner du ArrayList vers un array
+		// retourner du ArrayList vers un array (cf stackoverflow)
 		int[] newArray = new int[listClone.size()];
 		for (int i = 0; i < newArray.length; i++) {
 			newArray[i] = listClone.get(i);
@@ -147,6 +173,8 @@ public class Series1 {
 		return newArray;
 
 	}
+
+
 
 	public static String shortestWord(String text) {
 		// 10
@@ -169,6 +197,8 @@ public class Series1 {
 		return shortestWord;
 	}
 
+
+
 	public static String removeCapitals(String text) {
 		// 11
 
@@ -179,12 +209,13 @@ public class Series1 {
 			char letter = text.charAt(i);
 			// si letter n'est pas une majuscule, alors tWC = tWC + l
 			if (!Character.isUpperCase(letter)) {
-				textWithoutCapitals += letter; // rappel : += addition deux valeurs et stocke le résultat dans la
-												// variable (à gauche)
+				textWithoutCapitals += letter; // rappel : += addition deux valeurs et stocke le résultat dans la variable (à gauche)
 			}
 		}
 		return textWithoutCapitals;
 	}
+
+
 
 	public static long addingTwoNumbers(long number1, long number2) {
 		// 12
@@ -195,6 +226,8 @@ public class Series1 {
 		result = a + b;
 		return result;
 	}
+
+
 
 	public static long addingThreeNumbers(long number1, long number2, long number3) {
 		// 13
@@ -207,6 +240,8 @@ public class Series1 {
 		return result;
 	}
 
+
+
 	public static long addingSeveralNumbers(final Integer... numbers) {
 		// 14
 		long a = 0;
@@ -217,6 +252,8 @@ public class Series1 {
 		return a;
 	}
 
+
+
 	public static float makeNegative(float number) {
 		// 15
 		if (number < 0) {
@@ -225,6 +262,8 @@ public class Series1 {
 			return 0 - number;
 		}
 	}
+
+
 
 	public static boolean checkForSpecialCharacters(String string) {
 		// 16
@@ -236,6 +275,8 @@ public class Series1 {
 
 		return hasSpecial.find();
 	}
+
+
 
 	public static boolean checkIfStringStartsWithConsonant(String word) {
 		// 17
@@ -250,12 +291,16 @@ public class Series1 {
 		}
 	}
 
+
+
 	public static String getDomainName(String email) {
 		// 18
 		// .*@ --> avant le @ inclus (si après : @.*)
 		String getDomainName = email.replaceAll("(.*@|.com)", "");
 		return getDomainName;
 	}
+
+
 
 	public static int[] letterPosition(String name) {
 		// 19
@@ -272,9 +317,9 @@ public class Series1 {
 			letterPosition[i] = index; // tableau rempli avec les lettres/position
 		}
 		return letterPosition;
-
-
 	}
+
+
 
 	public static boolean isPeer(int number) {
 		// 20
