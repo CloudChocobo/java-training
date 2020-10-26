@@ -3,10 +3,8 @@ package fr.manulep.entrainement;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.regex.Pattern;
-
-import com.google.common.primitives.Chars;
-
 import java.util.regex.Matcher;
+
 
 public class Series1 {
 
@@ -42,21 +40,21 @@ public class Series1 {
 	public static int[] addElementToBeginning(int[] array, int element) {
 		// 3
 		// agrandir l'array longueur +1
-		int[] add = new int[(array.length + 1)];
+		int[]add = new int[(array.length+1)];
 		add[0] = element;
 
-		// add placé à l'avant de l'array
-		for (int i = 0; i < array.length; i++) {
-			add[i + 1] = array[i];
-		}
+		//add placé à l'avant de l'array
+		for (int i = 0; i< array.length; i++) {
+			add[i+1] = array [i];
+		} 
 		return add;
 	}
 
 	public static int[] allElementsExceptFirstThree(int[] array) {
 		// 4
-		return null;
-	}
 
+	}
+	
 	public static String getFirstHalf(String word) {
 		// 5
 		String getFirstHalf;
@@ -76,7 +74,7 @@ public class Series1 {
 
 		ArrayList<String> fruitsStartsWithA = new ArrayList<String>();
 
-		// element parcourt le tableau
+		//element parcourt le tableau
 		for (String fruit : array)
 			if (fruit.substring(0, 1).equals("a")) {
 				fruitsStartsWithA.add(fruit);
@@ -92,7 +90,7 @@ public class Series1 {
 
 		for (int i = 0; i < array.length; i++) {
 
-			// déclarer le cas null
+			//déclarer le cas null
 			if (array[i] != null && (array[i].substring(0, 1).equals("a") || array[i].substring(0, 1).equals("e")
 					|| array[i].substring(0, 1).equals("i") || array[i].substring(0, 1).equals("o")
 					|| array[i].substring(0, 1).equals("u") || array[i].substring(0, 1).equals("y"))) {
@@ -108,60 +106,58 @@ public class Series1 {
 		// 8
 		String[] order = new String[array.length];
 
-		// prendre le dernier mot de l' "array total-1"
+		//prendre le dernier mot de l' "array total-1"
 		int r = array.length - 1;
-
+			
 		// faire croiser r et i dans les tableaux
-		for (int i = 0; i < array.length; i++) {
-			order[i] = array[r];
+		for ( int i = 0; i < array.length; i++) {
+			order[i] = array [r];
 			r--;
-		}
+			}
 		return order;
-	}
+		}
 
 	public static int[] insertElementInTheMiddleOfAnArray(int[] array, int element) {
 		// 9
 
-		// faire d'un Array, un ArrayList
+		//faire d'un Array, un ArrayList
 		ArrayList<Integer> listClone = new ArrayList<>();
 		for (int num : array) {
 			listClone.add(num);
 		}
 
-		// Ajouter element au milieu de l'array - Math.round arrondi à l'entier le plus
-		// proche le plus petit (entier le + proche au dessus =.ceil)
+		//Ajouter element au milieu de l'array - Math.round arrondi à l'entier le plus proche le plus petit (entier le + proche au dessus =.ceil)
 		int middleEarth = Math.round(array.length / 2);
-		listClone.add(middleEarth, element);
+				listClone.add(middleEarth, element);
 
-		// retourner du ArrayList vers un array
-		int[] newArray = new int[listClone.size()];
-		for (int i = 0; i < newArray.length; i++) {
+		//retourner du ArrayList vers un array
+		int [] newArray = new int[listClone.size()];
+		for (int i = 0 ; i < newArray.length; i++){
 			newArray[i] = listClone.get(i);
 		}
 
 		return newArray;
-
+	
 	}
 
 	public static String shortestWord(String text) {
 		// 10
 
-		// faire un "filet" d'une grande valeur qui sera la longueur de référence
-		// initiale
+		//faire un "filet" d'une grande valeur qui sera la longueur de référence initiale
 		int length = 100;
-		String[] mots = text.split(" ");
-		// "" valeur minimum
+		 String[] mots = text.split(" ");
+		 // "" valeur minimum
 		String shortestWord = "";
+		
 
-		// boucle doit garder ou rejeter le nouveau mot étudié en fonctionde la longueur
-		// initiale ou mot précédement étudié qui devient longueur de ref
-		for (String word : mots) {
-			if (word.length() < length) {
+		//boucle doit garder ou rejeter le nouveau mot étudié en fonctionde la longueur initiale ou mot précédement étudié qui devient longueur de ref
+		for (String word : mots ) {
+			if ( word.length() < length ) {
 				length = word.length();
-				shortestWord = word;
+				shortestWord = word; 
+				}
 			}
-		}
-		return shortestWord;
+	return shortestWord;
 	}
 
 	public static String removeCapitals(String text) {
@@ -169,13 +165,12 @@ public class Series1 {
 
 		//
 		String textWithoutCapitals = "";
-
+		
 		for (int i = 0; i < text.length(); i++) {
 			char letter = text.charAt(i);
-			// si letter n'est pas une majuscule, alors tWC = tWC + l
+			//si letter n'est pas une majuscule, alors tWC = tWC + l
 			if (!Character.isUpperCase(letter)) {
-				textWithoutCapitals += letter; // rappel : += addition deux valeurs et stocke le résultat dans la
-												// variable (à gauche)
+				textWithoutCapitals += letter; //rappel : +=	addition deux valeurs et stocke le résultat dans la variable (à gauche)
 			}
 		}
 		return textWithoutCapitals;
@@ -206,8 +201,7 @@ public class Series1 {
 		// 14
 		long a = 0;
 		for (int i = 0; i < numbers.length; i++) {
-			a += numbers[i]; // rappel : += addition deux valeurs et stocke le résultat dans la variable (à
-								// gauche)
+			a += numbers[i]; //rappel : +=	addition deux valeurs et stocke le résultat dans la variable (à gauche)
 		}
 		return a;
 	}
@@ -223,9 +217,8 @@ public class Series1 {
 
 	public static boolean checkForSpecialCharacters(String string) {
 		// 16
-		// pattern peut compiler lettre/ nombre ou carac speciaux - puis matcher - faire
-		// attention !, à la fois dans true et false
-
+		//pattern peut compiler lettre/ nombre ou carac speciaux - puis matcher - faire attention !, à la fois dans true et false
+		 
 		Pattern special = Pattern.compile("[@#$%&*()_+=|<>?{}\\[\\]~-]");
 		Matcher hasSpecial = special.matcher(string);
 
@@ -246,31 +239,22 @@ public class Series1 {
 	}
 
 	public static String getDomainName(String email) {
-		// 18
-		// .*@ --> avant le @ inclus (si après : @.*)
+		// 18 
+		//.*@ --> avant le @ inclus (si après : @.*)
 		String getDomainName = email.replaceAll("(.*@|.com)", "");
 		return getDomainName;
 	}
 
 	public static int[] letterPosition(String name) {
 		// 19
-		String lowerCase = name.toLowerCase(); // transformer Majuscule en minuscule
-		
-		char[] alphabet = { ' ', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q',
-				'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z' }; // déclarer un '' vide car H = 8
-		int[] letterPosition = new int[lowerCase.length()];
-		
-		for (int i = 0; i < lowerCase.length(); i++) { 
-			char letters = lowerCase.charAt(i); // déterminer les lettres des mots
-			int index = Chars.indexOf(alphabet, letters);// rassembler les 2 index
-			letterPosition[i] = index; // tableau rempli avec les lettres/position
-		}
-		return letterPosition;
+		String[] alphabetNumber = name.alphabetNumber()
+		char[] alphabet = {"", }
+		return null;
 	}
 
 	public static boolean isPeer(int number) {
 		// 20
-		// si le modulo est égal à 0, alors pair, sinon impair
+		//si le modulo est égal à 0, alors pair, sinon impair
 		if (number % 2 == 0) {
 			return true;
 		} else {
