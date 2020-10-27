@@ -104,11 +104,17 @@ public class Series2 {
 	} else {
 		return false;
 	}
-	
 	}
+	
+	
 
 	public static boolean isRightTriangle(int side1, int side2, int side3) {
+		if (Math.pow(side1,2) + Math.pow(side2,2) == Math.pow(side3,2)|| Math.pow(side3,2) + Math.pow(side2,2) == Math.pow(side1,2) || Math.pow(side1,2) + Math.pow(side3,2) == Math.pow(side2,2)){
+			return true;
+		}else {
 		return false;
+		}
+	
 	}
 
 	public static boolean isOrder(int... number) {
