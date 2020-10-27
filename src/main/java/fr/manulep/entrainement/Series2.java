@@ -6,9 +6,9 @@ import java.util.Arrays;
 import java.util.List;
 
 public class Series2 {
-	
+
 	private Series2() {
-		 throw new IllegalStateException("Test class");
+		throw new IllegalStateException("Test class");
 	}
 
 	public static List<String> selectElementsFromListStartingWithA(List<String> elements) {
@@ -19,18 +19,18 @@ public class Series2 {
 			if (fruit.substring(0, 1).equals("a")) {
 				fruitsStartsWithA.add(fruit);
 			}
-	
+
 		return fruitsStartsWithA;
 	}
-	
+
 	public static List<String> sortByLastLetter(List<String> names) {
 		return new ArrayList<>();
 	}
-	
+
 	public static String exportWordsWithoutALetter(List<String> names, char letter) {
 		return "";
 	}
-	
+
 	public static String getAllLetters(List<String> words) {
 		return "";
 	}
@@ -50,14 +50,13 @@ public class Series2 {
 	public static List<Integer> allElementsExceptFirstAndLast(List<Integer> elements) {
 		return new ArrayList<>();
 	}
-	
+
 	public static List<Integer> reverseOrder(List<Integer> elements) {
-		 List<Integer>expectedList = new ArrayList<>();
-		 for (int i = elements.size()- 1; i >= 0; i-- ) {
-			 expectedList.add(elements.get(i));
-		 }
-		 return expectedList;
-	
+		List<Integer> expectedList = new ArrayList<>();
+		for (int i = elements.size() - 1; i >= 0; i--) {
+			expectedList.add(elements.get(i));
+		}
+		return expectedList;
 	}
 
 	public static List<Integer> swapFirstandLastElement(List<Integer> elements) {
@@ -70,7 +69,7 @@ public class Series2 {
 
 	public static String longestWord(String text) {
 		int length = 0;
-		text = text.replace(",","");
+		text = text.replace(",", "");
 		String[] mots = text.split(" ");
 		String longestWord = " ";
 
@@ -82,7 +81,6 @@ public class Series2 {
 		}
 		return longestWord;
 	}
-
 
 	public static String getAllLetters(String[] array) {
 		return null;
@@ -97,12 +95,12 @@ public class Series2 {
 	}
 
 	public static int roundUp(float number) {
-	
+
 		double arrondi;
 
 		arrondi = Math.round(number);
 
-		int result= (int)arrondi;
+		int result = (int) arrondi;
 
 		return result;
 
@@ -117,54 +115,54 @@ public class Series2 {
 	}
 
 	public static int convertToCelsius(int temperature) {
-		return 0;
+		int celsius = Math.round(((float)(temperature)-32) * 5/9);
+
+		return celsius;
+
 	}
 
 	public static boolean isPeerSum(final int... numbers) {
-	long a = 0;
-	for (int i = 0; i < numbers.length; i++) {
-		a += numbers[i];
+		long a = 0;
+		for (int i = 0; i < numbers.length; i++) {
+			a += numbers[i];
+		}
+		if (a % 2 == 0) {
+			return true;
+		} else {
+			return false;
+		}
 	}
-	if (a%2 == 0) {
-		return true;
-	} else {
-		return false;
-	}
-	}
-	
-	
 
 	public static boolean isRightTriangle(int side1, int side2, int side3) {
-		if (Math.pow(side1,2) + Math.pow(side2,2) == Math.pow(side3,2)|| Math.pow(side3,2) + Math.pow(side2,2) == Math.pow(side1,2) || Math.pow(side1,2) + Math.pow(side3,2) == Math.pow(side2,2)){
+		if (Math.pow(side1, 2) + Math.pow(side2, 2) == Math.pow(side3, 2)
+				|| Math.pow(side3, 2) + Math.pow(side2, 2) == Math.pow(side1, 2)
+				|| Math.pow(side1, 2) + Math.pow(side3, 2) == Math.pow(side2, 2)) {
 			return true;
-		}else {
-		return false;
+		} else {
+			return false;
 		}
-	
+
 	}
 
 	public static boolean isOrder(int... number) {
-		/*int[] a = 0;
-		int[] b = 0;
-		Arrays.sort(number);
-
-		for (int i = 0; a < b; i++) {
-			return true;
-		}*/
+		/*
+		 * int[] a = 0; int[] b = 0; Arrays.sort(number);
+		 * 
+		 * for (int i = 0; a < b; i++) { return true; }
+		 */
 		return false;
 	}
 
 	public static Float intToFloat(int number) {
 		float intToFloat;
-		intToFloat= (float)number;
+		intToFloat = (float) number;
 		return intToFloat;
-
 
 	}
 
 	public static Integer floatToInt(float number) {
 		int floatToInt;
-		floatToInt = (int)number;
+		floatToInt = (int) number;
 		return floatToInt;
 	}
 
