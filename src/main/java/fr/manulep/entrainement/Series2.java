@@ -84,7 +84,15 @@ public class Series2 {
 	}
 
 	public static int roundUp(float number) {
-		return 0;
+	
+		double arrondi;
+
+		arrondi = Math.round(number);
+
+		int result= (int)arrondi;
+
+		return result;
+
 	}
 
 	public static int findLastDayOfMonth(int month, int year) {
