@@ -11,9 +11,19 @@ public class Series2 {
 	}
 
 	public static List<String> selectElementsFromListStartingWithA(List<String> elements) {
-		return new ArrayList<>();
+		List<String> fruitsStartsWithA = new ArrayList<String>();
+
+		// element parcourt le tableau
+		for (String fruit : elements)
+			if (fruit.substring(0, 1).equals("a")) {
+				fruitsStartsWithA.add(fruit);
+			}
+	
+		return fruitsStartsWithA;
 	}
 
+		
+	
 	public static List<String> sortByLastLetter(List<String> names) {
 		return new ArrayList<>();
 	}
