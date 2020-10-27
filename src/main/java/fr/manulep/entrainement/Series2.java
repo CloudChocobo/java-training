@@ -163,7 +163,9 @@ public class Series2 {
 	}
 
 	public static Integer floatToInt(float number) {
-		return null;
+		int floatToInt;
+		floatToInt = (int)number;
+		return floatToInt;
 	}
 
 	public static String dateToString(LocalDate date, String format) {
