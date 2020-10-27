@@ -260,7 +260,7 @@ class Series2Test {
 	@Test
 	public void formatDateNicely() {
 		LocalDate date = LocalDate.of(2019, 26, 11);
-		assertEquals("26/11/2019", Series2.dateToString(date, "dd/mm/yyyy"));
+		assertEquals("26/11/2019", Series2.dateToString(date, "dd/MM/yyyy"));
 	}
 
 	/**

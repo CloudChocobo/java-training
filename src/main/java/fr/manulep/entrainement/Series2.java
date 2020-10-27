@@ -21,8 +21,6 @@ public class Series2 {
 	
 		return fruitsStartsWithA;
 	}
-
-		
 	
 	public static List<String> sortByLastLetter(List<String> names) {
 		return new ArrayList<>();
@@ -97,7 +95,16 @@ public class Series2 {
 	}
 
 	public static boolean isPeerSum(final int... numbers) {
+	long a = 0;
+	for (int i = 0; i < numbers.length; i++) {
+		a += numbers[i];
+	}
+	if (a%2 == 0) {
+		return true;
+	} else {
 		return false;
+	}
+	
 	}
 
 	public static boolean isRightTriangle(int side1, int side2, int side3) {
