@@ -68,8 +68,20 @@ public class Series2 {
 	}
 
 	public static String longestWord(String text) {
-		return null;
+		int length = 0;
+		text = text.replace(",","");
+		String[] mots = text.split(" ");
+		String longestWord = " ";
+
+		for (String word : mots) {
+			if (word.length() > length) {
+				length = word.length();
+				longestWord = word;
+			}
+		}
+		return longestWord;
 	}
+
 
 	public static String getAllLetters(String[] array) {
 		return null;
