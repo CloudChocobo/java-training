@@ -2,6 +2,7 @@ package fr.manulep.entrainement;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class Series2 {
@@ -143,11 +144,22 @@ public class Series2 {
 	}
 
 	public static boolean isOrder(int... number) {
+		/*int[] a = 0;
+		int[] b = 0;
+		Arrays.sort(number);
+
+		for (int i = 0; a < b; i++) {
+			return true;
+		}*/
 		return false;
 	}
 
 	public static Float intToFloat(int number) {
-		return null;
+		float intToFloat;
+		intToFloat= (float)number;
+		return intToFloat;
+
+
 	}
 
 	public static Integer floatToInt(float number) {
