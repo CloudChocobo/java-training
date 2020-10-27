@@ -51,7 +51,12 @@ public class Series2 {
 	}
 	
 	public static List<Integer> reverseOrder(List<Integer> elements) {
-		return new ArrayList<>();
+		 List<Integer>expectedList = new ArrayList<>();
+		 for (int i = elements.size()- 1; i >= 0; i-- ) {
+			 expectedList.add(elements.get(i));
+		 }
+		 return expectedList;
+	
 	}
 
 	public static List<Integer> swapFirstandLastElement(List<Integer> elements) {
