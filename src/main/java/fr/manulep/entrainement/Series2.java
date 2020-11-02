@@ -3,6 +3,7 @@ package fr.manulep.entrainement;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 public class Series2 {
@@ -36,6 +37,8 @@ public class Series2 {
 	}
 
 	public static List<String> getElementsLowerThanNumber(List<String> elements, int maxi) {
+		
+		
 		return new ArrayList<>();
 	}
 
@@ -145,13 +148,39 @@ public class Series2 {
 	}
 
 	public static boolean isOrder(int... number) {
-		/*
-		 * int[] a = 0; int[] b = 0; Arrays.sort(number);
-		 * 
-		 * for (int i = 0; a < b; i++) { return true; }
-		 */
-		return false;
+	List<Integer> emptyArray = new ArrayList<Integer>();
+	List<Integer> compareArray = new ArrayList<Integer>();
+	
+	boolean result = false;
+
+	for(Integer num : number) {
+		emptyArray.add(num);
+		compareArray.add(num);
+}
+	if(emptyArray.size() < 2){
+		result = true;
+	}else if(emptyArray.get(0) < emptyArray.get(1)){
+		Collections.sort(compareArray);
+	
+			if(emptyArray.equals(compareArray)){
+				result = true;
+			}else if (emptyArray != compareArray){
+				result = false;
+			}	
+
+	}else if(emptyArray.get(0) > emptyArray.get(1)){
+		Collections.sort(compareArray, Collections.reverseOrder());
+
+		if(emptyArray.equals(compareArray)){
+			result = true;
+		}else if(emptyArray != compareArray){
+			result = false;
+		}
 	}
+		return result;
+	}
+		
+	
 
 	public static Float intToFloat(int number) {
 		float intToFloat;
